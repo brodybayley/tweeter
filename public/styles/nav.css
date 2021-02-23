@@ -7,3 +7,15 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.nav-right {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.chevron {
+  color: red;
+}
