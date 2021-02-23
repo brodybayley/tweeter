@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  width: 100vw;
+  background-color: #00c6d4;
+  background-image: url(/images/ag-square.png)
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
