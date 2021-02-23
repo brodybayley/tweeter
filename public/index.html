@@ -50,10 +50,17 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <h3>Test Header</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti mollitia explicabo temporibus quis, blanditiis,
-      officia repudiandae est modi dolor ipsa autem cupiditate impedit itaque commodi vitae inventore consequuntur
-      quaerat eveniet.</p>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form>
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 
 </body>
