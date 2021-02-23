@@ -20,8 +20,10 @@
   font-family: 'Bungee', sans-serif;
 }
 
-.form-inline {
-  margin: 10px;
+#tweet-text {
+  margin: 1em 0 0 0;
+  width: 20em;
+  height: 5em;
 }
 
 button {
@@ -34,5 +36,4 @@ button {
   color: #ffffff;
   background-color: #4056a1;
   text-align: center;
-  transition: all 0.2s;
 }
