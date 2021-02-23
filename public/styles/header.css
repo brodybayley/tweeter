@@ -1,11 +1,12 @@
 header {
   height: 400px;
   width: 100vw;
-  background-color: #00c6d4;
+  background-color: #a8dadc;
   background-image: url(/images/ag-square.png)
 }
 
 .avatar {
+  padding: 1em 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;

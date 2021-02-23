@@ -1,7 +1,7 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056a1;
+  background-color: #457b9d;
   color: #ffffff;
   padding: 1.5em;
   display: flex;
@@ -18,5 +18,5 @@ nav {
 
 .chevron {
   font-size: 50px;
-  color: red;
+  color: #e63946;
 }
