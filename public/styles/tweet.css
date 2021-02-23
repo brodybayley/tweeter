@@ -1,16 +1,23 @@
 .container {
   display: flex;
   flex-flow: row;
+  align-items: center;
 }
 
 .new-tweet {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 3;
 }
 
-.form-inline {
+.bottom-form {
+  border-top: solid;
+  padding: 1em;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+}
+
+label {
+  text-align: ;
 }

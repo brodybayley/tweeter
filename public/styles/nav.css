@@ -7,7 +7,3 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
-.title {
-  font-family: 'Bungee', sans-serif;
-}
