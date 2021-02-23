@@ -4,8 +4,10 @@ nav {
   background-color: #4056a1;
   color: #ffffff;
   padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
-nav span {
+.title {
   font-family: 'Bungee', sans-serif;
 }
