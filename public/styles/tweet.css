@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-flow: row;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
