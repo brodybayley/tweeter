@@ -34,6 +34,7 @@
 }
 
 .tweet-container {
+  margin: 1em;
   border: solid;
   background-color: white;
   padding: 0.5em;
