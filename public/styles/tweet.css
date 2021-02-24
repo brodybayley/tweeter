@@ -3,7 +3,6 @@
   flex-flow: row;
   align-items: center;
   flex-direction: column;
-  flex: 3;
   padding: 0 10em 10em 10em;
 }
 
@@ -13,7 +12,7 @@
 }
 
 .tweet-header {
-  padding: 1em;
+  padding: .5em .5em 1em .5em;
   display: flex;
   justify-content: space-between;
 }
@@ -40,7 +39,7 @@
 
 .tweet-container {
   border: solid;
-  width: 47vw;
+  background-color: white;
 }
 
 .tweet-footer {
@@ -48,7 +47,7 @@
   font-size: 15px;
   padding: 0.5em 1em 1em 1em;
   margin: 1.5em 0 0 0;
-  border-top: solid;
+  border-top: 2px solid;
   display: flex;
   justify-content: space-between;
 }
