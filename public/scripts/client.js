@@ -1,5 +1,9 @@
 $(document).ready(function() {
   renderTweets(data);
+
+  $('form').on('submit', event => {
+    postRequest(event);
+  });
 });
 
 const data = [
@@ -32,7 +36,6 @@ const data = [
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    const oldTweets = $('.old-tweets');
     $('.old-tweets').append($tweet);
   }
 };
@@ -62,4 +65,15 @@ const createTweetElement = function(tweetData) {
 </article>
 `);
   return $tweet;
+};
+
+//creates AJAX post request and send form data to server
+const postRequest = function(event) {
+  event.preventDefault();
+  $
+    .ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $('.form').serialize()
+    });
 };
