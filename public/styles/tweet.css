@@ -10,7 +10,8 @@
 .tweet-header {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
+  width: 46vw;
+  border-bottom: solid;
 }
 
 .avatar-image {
@@ -18,12 +19,8 @@
   margin: 0.6em;
 }
 
-.user-thumbnail {
-  width: 25%;
-  display: inline-block;
-  text-align: center;
-  flex-direction: row;
-  vertical-align: middle;
+.tweet-container {
+  border: solid;
 }
 
 .bottom-form {
