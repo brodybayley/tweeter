@@ -7,6 +7,11 @@
   padding: 0 10em 10em 10em;
 }
 
+/*allows user tag name to appear when hovering over tweet*/
+.tweet-header:hover .user-tagname{
+  opacity: 1;
+}
+
 .tweet-header {
   padding: 1em;
   display: flex;
@@ -15,10 +20,12 @@
 
 .user-thumbnail {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-tagname {
+  opacity: 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -28,8 +35,7 @@
 }
 
 .avatar-image {
-  width: 4rem;
-  margin: 0.6em;
+  width: 3rem;
 }
 
 .tweet-container {
