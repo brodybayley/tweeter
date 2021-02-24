@@ -11,6 +11,10 @@ const onKeyUp = function() {
   const output = $(this).parent().find('.counter');
   //subtracts user input from count
   const left = 140 - count;
-  //displays updated count
-  output.html(left);
+  //displays red if count below 0 and reg font otherwise
+  if (left < 0) {
+    output.html(left).addClass('redClass');
+  } else {
+    output.html(left).removeClass('redClass');
+  }
 };
