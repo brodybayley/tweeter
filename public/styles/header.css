@@ -1,5 +1,6 @@
 .main-header {
-  height: 400px;
+  padding: 5em;
+  height: 550px;
   width: 100vw;
   background-color: #a8dadc;
   background-image: url(/images/ag-square.png)
