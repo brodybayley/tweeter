@@ -2,13 +2,28 @@
   display: flex;
   flex-flow: row;
   align-items: center;
-}
-
-.new-tweet {
-  display: flex;
   flex-direction: column;
   flex: 3;
   padding: 0 10em 10em 10em;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.avatar-image {
+  width: 4rem;
+  margin: 0.6em;
+}
+
+.user-thumbnail {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
+  vertical-align: middle;
 }
 
 .bottom-form {
