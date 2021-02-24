@@ -32,6 +32,7 @@ const data = [
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
+    const oldTweets = $('.old-tweets');
     $('.old-tweets').append($tweet);
   }
 };
@@ -39,7 +40,6 @@ const renderTweets = function(tweets) {
 
 const createTweetElement = function(tweetData) {
   const $tweet = $(`
-  <section class="old-tweets">
       <article class="tweet-container">
       <header class="tweet-header">
   <div class="user-thumbnail">
@@ -60,7 +60,6 @@ const createTweetElement = function(tweetData) {
   </span>
 </footer>
 </article>
-    </section>
 `);
   return $tweet;
 };
