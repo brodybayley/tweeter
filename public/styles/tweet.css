@@ -10,8 +10,6 @@
 .tweet-header {
   display: flex;
   justify-content: space-between;
-  width: 46vw;
-  border-bottom: solid;
 }
 
 .avatar-image {
@@ -21,6 +19,27 @@
 
 .tweet-container {
   border: solid;
+  width: 47vw;
+}
+
+.tweet-footer {
+  width: 45vw;
+  font-size: 15px;
+  padding: 0.5em 0 1em 0;
+  border-top: solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-age {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tweet-icons {
+  color: #1d3557;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .bottom-form {
