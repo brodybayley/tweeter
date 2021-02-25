@@ -46,19 +46,21 @@ const renderLastTweet = function() {
 
 
 const createTweetElement = function(tweetData) {
-  const $tweet = $(`
-      <article class="tweet-container">
-      <header class="tweet-header">
+  const header = $(`
+  <header class="tweet-header">
   <div class="user-thumbnail">
     <span><img class="avatar-image" src="${tweetData.user.avatars}"></span>
     <span>${tweetData.user.name}</span>
   </div>
   <span class="user-tagname">${tweetData.user.handle}</span>
-</header>
-<div class="tweet-body">
-  <span class="tweet-content">${tweetData.content.text}</span>
-</div>
-<footer class="tweet-footer">
+</header>`
+  );
+  //function protects site from XSS
+  const safeChar = $("<div>").text(tweetData.content.text);
+  safeChar.addClass('tweet');
+
+  const footer = $(`
+  <footer class="tweet-footer">
   <span class="tweet-age">newDate${tweetData.created_at} days ago</span>
   <span class="links">
     <a href='#' class="tweet-icons">🏴</a>
@@ -66,8 +68,17 @@ const createTweetElement = function(tweetData) {
     <a href='#' class="tweet-icons">♥</a>
   </span>
 </footer>
-</article>
-`);
+  `);
+
+  // const $tweet = $(`<article class="tweet-container"></article>`);
+  const $tweet = $("<article>");
+
+  $tweet
+    .addClass('tweet')
+    .append(header)
+    .append(safeChar)
+    .append(footer);
+
   return $tweet;
 };
 
