@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function() {
   //call tweets when page first loads
   loadTweets();
   //creates AJAX post request and send form data to server
-  $('form').on('submit', function (event) {
+  $('form').on('submit', function(event) {
     event.preventDefault();
     const tweetBody = $('#tweet-text').val();
     //if/else statements to check for char length and empty form
@@ -25,14 +25,16 @@ $(document).ready(function () {
 });
 
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('.old-tweets').append($tweet);
+    //places tweet at top of list
+    $('.old-tweets').prepend($tweet);
+    $('#tweet-text').empty();
   }
 };
 
-const renderLastTweet = function () {
+const renderLastTweet = function() {
   $
     .ajax('/tweets')
     .then((res) => {
@@ -42,7 +44,7 @@ const renderLastTweet = function () {
 };
 
 
-const createTweetElement = function (tweetData) {
+const createTweetElement = function(tweetData) {
   const $tweet = $(`
       <article class="tweet-container">
       <header class="tweet-header">
@@ -69,7 +71,7 @@ const createTweetElement = function (tweetData) {
 };
 
 //fetches tweets from /tweets page
-const loadTweets = function () {
+const loadTweets = function() {
   $
     .ajax('/tweets')
     .then((res) => {
