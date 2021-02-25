@@ -6,6 +6,11 @@
   padding: 0 10em 10em 10em;
 }
 
+/*hide error messages when loading tweets*/
+.hide {
+  display: none;
+}
+
 /*allows user tag name to appear when hovering over tweet*/
 .tweet-header:hover .user-tagname{
   opacity: 1;

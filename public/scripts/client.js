@@ -4,12 +4,16 @@ $(document).ready(function() {
   //creates AJAX post request and send form data to server
   $('form').on('submit', function(event) {
     event.preventDefault();
+    //hides error messages
+    $('#no-characters').addClass('hide');
+    $('#max-characters').addClass('hide');
+
     const tweetBody = $('#tweet-text').val();
     //if/else statements to check for char length and empty form
     if (tweetBody.length > 140) {
-      return alert('Tweet content too long!');
+      $('#max-characters').toggleClass('hide');
     } else if (tweetBody.length === 0 || tweetBody.length === null) {
-      return alert('No content present!');
+      $('#no-characters').toggleClass('hide');
     } else {
       $
         .ajax({
