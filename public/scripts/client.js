@@ -30,13 +30,14 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(tweet);
     //places tweet at top of list
     $('.old-tweets').prepend($tweet);
-    $('#tweet-text').empty();
   }
 };
 
 const renderLastTweet = function() {
   $
     .ajax('/tweets')
+    //user to clear form after posting tweet
+    .then($('textarea').val(''))
     .then((res) => {
       return renderTweets([res[res.length - 1]]);
     })
