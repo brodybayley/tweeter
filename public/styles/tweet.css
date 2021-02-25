@@ -22,7 +22,6 @@
   color: #f1faee;
   border: 2px solid #e63946;
 }
-}
 
 /*allows user tag name to appear when hovering over tweet*/
 .tweet-header:hover .user-tagname{
@@ -109,4 +108,10 @@ button {
 
 .redClass {
   color: #e63946;
+}
+
+@media only screen and (min-width: 1024px) {
+  #tweet-text {
+    margin: 0;
+  }
 }

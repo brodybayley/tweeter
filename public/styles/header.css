@@ -3,11 +3,12 @@
   height: 550px;
   width: 100vw;
   background-color: #a8dadc;
+  color: #f1faee;
   background-image: url(/images/ag-square.png)
 }
 
 .avatar {
-  padding: 1em 0 0 0;
+  padding: 0 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +18,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    margin: 0 0 0 3rem;
+    justify-content: start;
+  }
 }

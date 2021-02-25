@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- Script to run j query-->
   <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -62,7 +63,6 @@
   <!-- section to write and post a tweet -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
       <form class="form-inline" action="/tweets" method="POST">
         <div class="hide" id="no-characters">We need words to tweet. Type something!</div>
         <div class="hide" id="max-characters">You need to cut back a bit. Max 140!</div>

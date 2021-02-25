@@ -28,3 +28,14 @@ main {
   width: 90vw;
   align-items: center;
 }
+
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    align-items: start;
+    padding: 14rem 0 0 0;
+    background-color: orange;
+    justify-content: space-between;
+  }
+}
