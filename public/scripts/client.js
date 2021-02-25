@@ -12,10 +12,12 @@ $(document).ready(function() {
     //if/else statements to check for char length and empty form
     if (tweetBody.length > 140) {
       //will unhide error msg if true
+      $('#max-characters').keyup();
       $('#max-characters').toggleClass('hide');
       $('#max-characters').slideDown('slow');
     } else if (tweetBody.length === 0 || tweetBody.length === null) {
       //will unhide error msg if true
+      $('#no-characters').keyup();
       $('#no-characters').toggleClass('hide');
       $('#no-characters').slideDown('slow');
     } else {
@@ -26,6 +28,8 @@ $(document).ready(function() {
           data: $(this).serialize()
         })
         .then(res => {
+          //resets counter after tweet is posted
+          $('.counter').text(140);
           return renderLastTweet();
         });
     }
