@@ -11,6 +11,19 @@
   display: none;
 }
 
+#max-characters {
+  background:#e63946;
+  color: #f1faee;
+  border: 2px solid #e63946;
+}
+
+#no-characters {
+  background: #e63946;
+  color: #f1faee;
+  border: 2px solid #e63946;
+}
+}
+
 /*allows user tag name to appear when hovering over tweet*/
 .tweet-header:hover .user-tagname{
   opacity: 1;

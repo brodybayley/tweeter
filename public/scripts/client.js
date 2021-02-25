@@ -11,9 +11,13 @@ $(document).ready(function() {
     const tweetBody = $('#tweet-text').val();
     //if/else statements to check for char length and empty form
     if (tweetBody.length > 140) {
+      //will unhide error msg if true
       $('#max-characters').toggleClass('hide');
+      $('#max-characters').slideDown('slow');
     } else if (tweetBody.length === 0 || tweetBody.length === null) {
+      //will unhide error msg if true
       $('#no-characters').toggleClass('hide');
+      $('#no-characters').slideDown('slow');
     } else {
       $
         .ajax({
@@ -75,7 +79,7 @@ const createTweetElement = function(tweetData) {
   `);
 
   // const $tweet = $(`<article class="tweet-container"></article>`);
-  const $tweet = $("<article>");
+  const $tweet = $('<article class="tweet-container"></article>');
 
   $tweet
     .addClass('tweet')
