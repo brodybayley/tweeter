@@ -1,32 +1,48 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //call tweets when page first loads
   loadTweets();
   //creates AJAX post request and send form data to server
-  $('form').on('submit', function(event) {
+  $('form').on('submit', function (event) {
     event.preventDefault();
-    $
-      .ajax({
-        url: "/tweets",
-        method: "POST",
-        data: $(this).serialize()
-      })
-      .then(res => {
-        console.log(res);
-        return loadTweets();
-      });
+    const tweetBody = $('#tweet-text').val();
+    //if/else statements to check for char length and empty form
+    if (tweetBody.length > 140) {
+      return alert('Tweet content too long!');
+    } else if (tweetBody.length === 0 || tweetBody.length === null) {
+      return alert('No content present!');
+    } else {
+      $
+        .ajax({
+          url: "/tweets",
+          method: "POST",
+          data: $(this).serialize()
+        })
+        .then(res => {
+          return renderLastTweet();
+        });
+    }
   });
 });
 
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('.old-tweets').append($tweet);
   }
 };
 
+const renderLastTweet = function () {
+  $
+    .ajax('/tweets')
+    .then((res) => {
+      return renderTweets([res[res.length - 1]]);
+    })
+    .catch(err => console.log(err));
+};
 
-const createTweetElement = function(tweetData) {
+
+const createTweetElement = function (tweetData) {
   const $tweet = $(`
       <article class="tweet-container">
       <header class="tweet-header">
@@ -53,7 +69,7 @@ const createTweetElement = function(tweetData) {
 };
 
 //fetches tweets from /tweets page
-const loadTweets = function() {
+const loadTweets = function () {
   $
     .ajax('/tweets')
     .then((res) => {
