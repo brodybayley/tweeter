@@ -20,7 +20,7 @@ nav {
 }
 
 .chevron {
-  font-size: 30px;
+  font-size: 3rem;
   color: #e63946;
 }
 
@@ -30,9 +30,5 @@ nav {
     background-image: none;
     font-size: 24px;
     padding: 1.5em;
-  }
-  .chevron {
-    font-size: 50px;
-    color: #e63946;
   }
 }

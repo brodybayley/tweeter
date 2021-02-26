@@ -71,7 +71,7 @@ const createTweetElement = function(tweetData) {
   <header class="tweet-header">
   <div class="user-thumbnail">
     <span><img class="avatar-image" src="${tweetData.user.avatars}"></span>
-    <span>${tweetData.user.name}</span>
+    <span class="tweet-username">${tweetData.user.name}</span>
   </div>
   <span class="user-tagname">${tweetData.user.handle}</span>
 </header>`
