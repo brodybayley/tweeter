@@ -1,9 +1,10 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #457b9d;
-  color: #ffffff;
-  padding: 1.5em;
+  background-color: #a8dadc;
+  color: #f1faee;
+  background-image: url(/images/ag-square.png);
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -19,6 +20,19 @@ nav {
 }
 
 .chevron {
-  font-size: 50px;
+  font-size: 30px;
   color: #e63946;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #457b9d;
+    background-image: none;
+    font-size: 24px;
+    padding: 1.5em;
+  }
+  .chevron {
+    font-size: 50px;
+    color: #e63946;
+  }
 }

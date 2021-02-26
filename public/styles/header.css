@@ -7,6 +7,10 @@
   background-image: url(/images/ag-square.png)
 }
 
+.nav-right {
+  font-size: 16px;
+}
+
 .avatar {
   padding: 0 0 0 0;
   display: flex;
@@ -24,5 +28,8 @@
   .main-header {
     margin: 0 0 0 3rem;
     justify-content: start;
+  }
+  .nav-right {
+    font-size: 24px;
   }
 }
