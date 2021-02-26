@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('this is from script js');
   //produces an event whenever user types in tweet box
   $('#tweet-text').on('keyup', onKeyUp);
 });

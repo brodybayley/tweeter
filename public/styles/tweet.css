@@ -100,17 +100,9 @@
 
 #tweet-text {
   width: 100%;
-  /* margin: 1em; */
   height: 5em;
 }
 
-/* .tweet-container {
-  margin: 1em;
-  border: solid;
-  background-color: white;
-  padding: 0.5em;
-  overflow-wrap: anywhere;
-} */
 button {
   display: inline-block;
   padding: 0.3em 1.2em;
@@ -125,8 +117,4 @@ button {
 
 .redClass {
   color: #e63946;
-}
-
-@media only screen and (min-width: 1024px) {
-
 }
