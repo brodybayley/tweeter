@@ -12,14 +12,21 @@ $(document).ready(function() {
     //if/else statements to check for char length and empty form
     if (tweetBody.length > 140) {
       //will unhide error msg if true
-      $('#max-characters').keyup();
       $('#max-characters').toggleClass('hide');
-      $('#max-characters').slideDown('slow');
+      //reveal alert and remove alert after 4 secs
+      $('#max-characters').slideDown(function() {
+        setTimeout(function() {
+          $('#max-characters').slideUp();
+        }, 4000);
+      });
     } else if (tweetBody.length === 0 || tweetBody.length === null) {
       //will unhide error msg if true
-      $('#no-characters').keyup();
       $('#no-characters').toggleClass('hide');
-      $('#no-characters').slideDown('slow');
+      $('#no-characters').slideDown(function() {
+        setTimeout(function() {
+          $('#no-characters').slideUp();
+        }, 4000);
+      });
     } else {
       $
         .ajax({
@@ -44,6 +51,7 @@ const renderTweets = function(tweets) {
     $('.old-tweets').prepend($tweet);
   }
 };
+
 
 const renderLastTweet = function() {
   $

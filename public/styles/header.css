@@ -1,9 +1,10 @@
 .main-header {
-  padding: 5em;
-  height: 550px;
+  padding: 5rem;
+  margin: 2em 2em;
+  height: 500px;
   background-color: #a8dadc;
   color: #f1faee;
-  background-image: url(/images/ag-square.png)
+  background-image: url(/images/ag-square.png);
 }
 
 .nav-right {
@@ -11,7 +12,6 @@
 }
 
 .avatar {
-  padding: 0 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,5 +30,11 @@
   }
   .nav-right {
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .main-header {
+    width: 100%;
   }
 }
