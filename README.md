@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone that allows users to post a tweet
 
 # Final Product
 
-!["Screenshot of URL edit page"](https://github.com/brodybayley/tinyapp/blob/security/docs/urls-id.png?raw=true)
+!["Screenshot of monitor size"](https://github.com/brodybayley/tweeter/blob/master/docs/urls-webpage.png)
 
 !["Screenshot of URLs page"](https://github.com/brodybayley/tinyapp/blob/security/docs/urls-page.png?raw=true)
 
