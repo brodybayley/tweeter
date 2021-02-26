@@ -4,7 +4,7 @@
   flex-flow: row;
   align-items: center;
   flex-direction: column;
-  padding: 1em;
+  padding: 0 2em 2em 2em;
 }
 
 /*hide error messages when loading tweets*/
@@ -52,7 +52,7 @@
 }
 
 .tweet-container {
-  margin: 1em;
+  margin: 0 0 1em 0;
   border: solid;
   background-color: white;
   padding: 0.5em;
@@ -94,7 +94,8 @@
 }
 
 #tweet-text {
-  margin: 1em;
+  width: 100%;
+  /* margin: 1em; */
   height: 5em;
 }
 
@@ -122,7 +123,7 @@ button {
 }
 
 @media only screen and (min-width: 1024px) {
-  #tweet-text {
+  /* #tweet-text {
     margin: 0;
-  }
+  } */
 }
