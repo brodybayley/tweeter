@@ -1,9 +1,10 @@
 .container {
+  flex: 1;
   display: flex;
   flex-flow: row;
   align-items: center;
   flex-direction: column;
-  padding: 0 10em 10em 10em;
+  padding: 1em;
 }
 
 /*hide error messages when loading tweets*/
@@ -59,7 +60,7 @@
 }
 
 .tweet-footer {
-  width: 45vw;
+  /* width: 45vw; */
   font-size: 15px;
   padding: 0.5em 1em 1em 1em;
   margin: 1.5em 0 0 0;
@@ -88,9 +89,12 @@
   font-family: 'Bungee', sans-serif;
 }
 
+.new-tweet {
+  width: 100%;
+}
+
 #tweet-text {
   margin: 1em;
-  width: 45vw;
   height: 5em;
 }
 

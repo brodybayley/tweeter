@@ -58,6 +58,7 @@ const renderLastTweet = function() {
 
 
 const createTweetElement = function(tweetData) {
+  const timeStamp = moment(tweetData.created_at).fromNow();
   const header = $(`
   <header class="tweet-header">
   <div class="user-thumbnail">
@@ -73,7 +74,7 @@ const createTweetElement = function(tweetData) {
 
   const footer = $(`
   <footer class="tweet-footer">
-  <span class="tweet-age">newDate${tweetData.created_at} days ago</span>
+  <span class="tweet-age">${timeStamp}</span>
   <span class="links">
     <a href='#' class="tweet-icons">🏴</a>
     <a href='#' class="tweet-icons">🔁</a>
